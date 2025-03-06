@@ -3,7 +3,7 @@
  * @author James Rohr {methods written: isPalindrome, isAbecedarian}
  * Partner { Z Wang } {methods written: isPangram, capitalizeFirstLetter}
  *
- * @since 3-18-2025
+ * @since 3-06-2025
  */
 
 public class Antics {
@@ -64,25 +64,8 @@ public class Antics {
      */
     public static boolean isPangram(String s) {
 
-        //Array for the checking of each character
-        boolean[] alphabetCheck = new boolean[26];
-        int index = 0;
-        // put the string into lower case since we are only checking a-z
-        s = s.toLowerCase();
-        //Loop for the entire string length to check each character
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            if ('a' <= c && c <= 'z') {
-                index = c - 'a';
-                alphabetCheck[index] = true;
-            }
-        }
-        // Return false if not all items are covered in the array
-        for (int i = 0; i < 26; i++) {
-            if (!alphabetCheck[i])
-                return false;
-        }
-        return true;
+        //Code to be added here
+     
     }
 
 
@@ -93,12 +76,7 @@ public class Antics {
      * Example: california -> California
      */
     public static boolean capitalizeFirstLetter(String s){
-        //Check to see if string is empty first
-            if (s.isEmpty() || s == null) {
-                return false;
-            }
-            //If string is not empty then return the string with first letter of string in upper case
-            return Character.isUpperCase(s.charAt(0));
-        }
+      
+        //Code to be added here
     }
 
