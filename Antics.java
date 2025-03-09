@@ -80,7 +80,7 @@ public class Antics {
             //                          ^
             //                          this range covers all alphabet letters
             //                          from 'a'(97) to 'z'(97 + 26)
-            if(s.indexOf('a'+ i))
+            if(s.indexOf('a'+ i) != -1)
             {
                 //add 1 to counts, indicates that
                 //1 alphabet letter has appeared in
