@@ -1,7 +1,7 @@
 /**
  * Description Partner Lab 2 that is a program to test different word and String operations.
  * @author James Rohr {methods written: isPalindrome, isAbecedarian}
- * Partner { Z Wang } {methods written: isPangram, capitalizeFirstLetter}
+ * Partner Z Wang {methods written: isPangram, capitalizeFirstLetter}
  *
  * @since 3-06-2025
  */
@@ -64,8 +64,33 @@ public class Antics {
      */
     public static boolean isPangram(String s) {
 
-        //Code to be added here
-     
+
+
+        //declare and initialize variabe counts
+        //"counts" repersent how many alphabet letter appears in
+        //the param String s
+        int counts = 0;
+
+        //create a loop to check for
+        //all 26 alphabet letters that
+        //appears in s
+        for(int i = 0; i <26; i++)
+        {
+            //if find a index of letter ('a' + i) in String s
+            //                          ^
+            //                          this range covers all alphabet letters
+            //                          from 'a'(97) to 'z'(97 + 26)
+            if(s.indexOf('a'+ i) != -1)
+            {
+                //add 1 to counts, indicates that
+                //1 alphabet letter has appeared in
+                //String s.
+                counts++;
+            }
+        }
+
+        //retun if all 26 letters has appeared in String s
+        return counts == 26;
     }
 
 
@@ -75,8 +100,20 @@ public class Antics {
      * A method called capitalizeFirstLetter that takes a string and returns the same string with its first letter (only) capitalized
      * Example: california -> California
      */
-    public static boolean capitalizeFirstLetter(String s){
-      
-        //Code to be added here
+    public static String capitalizeFirstLetter(String s){
+
+
+
+
+
+        //return the combination String of
+        //      String s's first letter in lowercase
+        //                      and
+        //      rest of the String s
+        return s.substring(0,1).toLowerCase() + s.substring(1,s.length());
     }
+
+
+
+}
 
