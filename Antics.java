@@ -57,8 +57,9 @@ public class Antics {
     /**
      * @author Z Wang
      * method isPangram
-     * @param s
-     * @return boolean whether string has all 26 alphabet letters or not
+     * @param s a String variable
+     * @return boolean ture -if all 26 alphabet letters were found in String s
+     *                 false-if the String dones't contain all 26 letters
      * A method called isPangram that takes a string and returns true if it contains all 26 letters of the alphabet
      * Example: The quick brown fox jumps over the lazy dog.
      */
@@ -66,36 +67,30 @@ public class Antics {
 
 
 
-        //declare and initialize variabe counts
-        //"counts" repersent how many alphabet letter appears in
-        //the param String s
-        int counts = 0;
+
 
         //create a loop to check for
         //all 26 alphabet letters that
         //appears in s
         for(int i = 0; i <26; i++)
         {
-            //if find a index of letter ('a' + i) in String s
-            //                          ^
-            //                          this range covers all alphabet letters
-            //                          from 'a'(97) to 'z'(97 + 26)
-            if(s.indexOf('a'+ i) != -1)
+            //if doesn't find a letter from a~z
+            //return false immediately
+            if(s.toLowerCase().indexOf('a'+ i) == -1)
             {
-                //add 1 to counts, indicates that
-                //1 alphabet letter has appeared in
-                //String s.
-                counts++;
+                return false;
             }
         }
 
-        //retun if all 26 letters has appeared in String s
-        return counts == 26;
+        //return true if the loop completed(found all 26 letters)
+        return true;
     }
 
 
     /**
      * @author Z Wang
+     * @param s a String variable
+     * @return return String s with first letter in capitalized
      * method capitalizeFirstLetter
      * A method called capitalizeFirstLetter that takes a string and returns the same string with its first letter (only) capitalized
      * Example: california -> California
@@ -107,10 +102,10 @@ public class Antics {
 
 
         //return the combination String of
-        //      String s's first letter in lowercase
+        //      String s's first letter in uppercase
         //                      and
         //      rest of the String s
-        return s.substring(0,1).toLowerCase() + s.substring(1,s.length());
+        return s.substring(0,1).toUpperCase() + s.substring(1,s.length());
     }
 
 
